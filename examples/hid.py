@@ -3,6 +3,7 @@ from adafruit_hid.keycode import Keycode
 from adafruit_hid.mouse import Mouse
 import adafruit_dotstar as dotstar
 import board
+import random
 import time
 
 #Don't want anyone to spot the malicious device!
@@ -18,7 +19,7 @@ maxMouseMove = 127
 minMouseMove = -127
 
 #Time in seconds to wait until next attack
-maxInterval = 600
+maxInterval = 30
 minInterval = 15
 
 while True:
@@ -32,4 +33,4 @@ while True:
 
     print("heeheehee")
 
-    time.sleep(random.randint(minInterval, maxInterval)
+    time.sleep(random.randint(minInterval, maxInterval))
